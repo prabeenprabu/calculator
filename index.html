@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <h1 class="name">calculator</h1>
+        <div class="calculator">
+            <audio id="play" src="music/beep.wav"></audio>
+            <input type="text" id="display" disabled class="display">
+            <div class="row">
+                <button onclick="display('9')">9</button>
+                <button onclick="display('8')">8</button>
+                <button onclick="display('7')">7</button>
+                <button onclick="display('+')" class="operator">+</button>
+            </div>
+            <div class="row">
+                <button onclick="display('6')">6</button>
+                <button onclick="display('5')">5</button>
+                <button onclick="display('4')">4</button>
+                <button onclick="display('-')" class="operator">-</button>
+            </div>
+            <div class="row">
+                <button onclick="display('3')">3</button>
+                <button onclick="display('2')">2</button>
+                <button onclick="display('1')">1</button>
+                <button onclick="display('*')" class="operator">x</button>
+            </div>
+            <div class="row">
+                <button onclick="display('00')">00</button>
+                <button onclick="display('0')">0</button>
+                <button onclick="display('<')" class="operator">(</button>
+                <button onclick="display('/')" class="operator">/</button>
+            </div>
+            <div class="row">
+                <button onclick="clean()" class="operator">AC</button>
+                <button onclick="back()"><i class="fa-solid fa-delete-left"></i></button>
+                <button onclick="display('>')" class="operator">)</button>
+                <button onclick="answer()" class="operator equal">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

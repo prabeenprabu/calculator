@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+
+$grey : #141414;
+$mildBlue : #cddcdf;
+$orange : #cc5803;
+$lightGrey : #b6b6b6;
+$white : #f8edeb;
+$green : #6ede8a;
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: $mildBlue;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+
+    h1{
+        color: $grey;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 20px 15px;
+    }
+
+    .fa-solid{
+        font-size: 25px;
+    }
+
+    .container{
+        width: 50%;
+        padding: 10px;  
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+        align-items: center;
+
+        .calculator{
+            background-color: $grey;
+            width: 50%;
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            box-shadow: -15px 15px 10px $lightGrey;
+
+            .display{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin: 0px 0 10px 0;
+                min-height: 45px;
+                border: none;
+                text-align: right;
+                background-color: $white;
+                border-radius: 10px;
+                font-size: 37px;
+                padding: 5px 10px;
+            }
+            
+            .row{
+                width:100%;
+                display: flex;
+                justify-content: space-between;
+                margin: 10px 0;
+                
+
+                button{
+                    min-width: 23%;
+                    min-height: 50px;
+                    border-radius: 10%;
+                    font-size: 30px;
+                    color: $grey;
+                    background-color: $green;
+                    border: none;
+                }
+
+                .operator{
+                    font-weight: bold;
+                    background-color: $orange;
+                }
+                .equal{
+                    background-color: $lightGrey;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:678px) {
+    body{
+        .container{
+            width: 80%;
+        }
+    }    
+}
+
+@media screen and (max-width:677px) {
+    body{
+        width: 100%;
+        min-height: 10vh;
+        h1{
+            display: none;
+        }
+        .container{
+            width: 100%;
+            height: calc(100vh - 25px);
+
+            .calculator{
+                width: 100%;
+                height: 100%;
+                box-shadow: none;
+            }
+        }
+    }
+    
+}
