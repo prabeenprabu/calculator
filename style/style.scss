@@ -6,6 +6,7 @@ $orange : #cc5803;
 $lightGrey : #b6b6b6;
 $white : #f8edeb;
 $green : #6ede8a;
+$red : #a9280f;
 
 *{
     padding: 0;
@@ -20,6 +21,7 @@ body{
     justify-content: center;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
+    color: $grey;
 
     h1{
         color: $grey;
@@ -40,6 +42,16 @@ body{
         // justify-content: space-between;
         align-items: center;
 
+        .sound{
+            display: flex;
+            justify-content: space-between;
+            // width: 40%;
+            padding: 10px;
+
+            #musicName{
+                padding: 0 35px ;
+            }
+        }
         .calculator{
             background-color: $grey;
             width: 50%;
@@ -81,7 +93,9 @@ body{
                     background-color: $green;
                     border: none;
                 }
-
+                .back{
+                    background-color: $red;
+                }
                 .operator{
                     font-weight: bold;
                     background-color: $orange;
@@ -110,7 +124,7 @@ body{
         }
         .container{
             width: 100%;
-            height: calc(100vh - 25px);
+            height: calc(100vh - 35px);
 
             .calculator{
                 width: 100%;
