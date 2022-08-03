@@ -8,76 +8,73 @@ var leftMove = document.getElementById("left");
 var rightMove = document.getElementById("right");
 var index = 0;
 //adding values
-musicList.push("Beep","Error","Metal","TypeWriter");
-musicDir.push("music/beep.wav","music/error.wav","music/metal.wav","music/type.wav");
-
+musicList.push("Beep", "Error", "Metal", "TypeWriter", "Mugunth");
+musicDir.push(
+    "music/beep.wav",
+    "music/error.wav",
+    "music/metal.wav",
+    "music/type.wav",
+    "music/mugunth.wav"
+);
 
 musicDisplay.innerHTML = musicList[index];
 //functions
-function display(val){
+function display(val) {
     music.play();
-    if(calDisplay.value.startsWith('E')){
+    if (calDisplay.value.startsWith("E")) {
         clean();
         calDisplay.value += val;
-    }
-    else if(val == '<'){
+    } else if (val == "<") {
         calDisplay.value += "(";
-    }
-    else if(val == '>'){
+    } else if (val == ">") {
         calDisplay.value += ")";
-    }
-    else{
+    } else {
         calDisplay.value += val;
-    }    
-};
-function answer(){
+    }
+}
+function answer() {
     music.play();
-    if(calDisplay.value != ""){
-        if(calDisplay.value.startsWith('0')){
+    if (calDisplay.value != "") {
+        if (calDisplay.value.startsWith("0")) {
             calDisplay.value = eval(calDisplay.value.slice(1));
-        }
-        else{
+        } else {
             calDisplay.value = eval(calDisplay.value);
         }
+    } else {
+        calDisplay.style.color = "red";
+        calDisplay.value = "Enter Value !";
     }
-    else{
-        calDisplay.style.color = "red"; 
-        calDisplay.value = "Enter Value !"
-    }
-    
-};
-function back(){
+}
+function back() {
     music.play();
     var num = calDisplay.value;
-    calDisplay.value = num.slice(0,-1);
-};
-function clean(){
+    calDisplay.value = num.slice(0, -1);
+}
+function clean() {
     music.play();
     calDisplay.value = "";
     calDisplay.style.color = "#141414";
-};
+}
 
-var setMusic = (name,index) => {
+var setMusic = (name, index) => {
     music.src = name;
     musicDisplay.innerText = musicList[index];
 };
-rightMove.onclick = function() {
-    if(index <= 2){        
+rightMove.onclick = function () {
+    if (index <= 3) {
         index++;
-        setMusic(musicDir[index],index);
-    }
-    else{
+        setMusic(musicDir[index], index);
+    } else {
         index = 0;
-        setMusic(musicDir[index],index);
+        setMusic(musicDir[index], index);
     }
 };
-leftMove.onclick = function(){
-    if(index == 0){        
-        index = 3;
-        setMusic(musicDir[index],index);
-    }
-    else{
+leftMove.onclick = function () {
+    if (index == 0) {
+        index = 4;
+        setMusic(musicDir[index], index);
+    } else {
         index--;
-        setMusic(musicDir[index],index);
+        setMusic(musicDir[index], index);
     }
 };
