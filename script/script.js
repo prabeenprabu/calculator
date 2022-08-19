@@ -47,9 +47,13 @@ function answer() {
 }
 function back() {
     music.play();
+    //getting the display content
     var num = calDisplay.value;
+    //re add the got content without last character
     calDisplay.value = num.slice(0, -1);
 }
+
+// function to clean the display box
 function clean() {
     music.play();
     calDisplay.value = "";
@@ -78,6 +82,15 @@ leftMove.onclick = function () {
         setMusic(musicDir[index], index);
     }
 };
+
+//factorial button coding
+function fact() {
+    music.play();
+    const num = calDisplay.value;
+    clean();
+    calDisplay.value = factorial(num);
+}
+
 //factorial function
 function factorial(n) {
     let k = 1;
