@@ -87,6 +87,15 @@ body .container .calculator .row .operator {
 body .container .calculator .row .equal {
   background-color: #b6b6b6;
 }
+body .container .calculator .row .power {
+  position: relative;
+}
+body .container .calculator .row .power::after {
+  content: "2";
+  font-size: 16px;
+  position: absolute;
+  top: 20%;
+}
 
 @media screen and (min-width: 678px) {
   body .container {

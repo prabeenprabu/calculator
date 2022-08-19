@@ -1,58 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap");
 
-$grey : #141414;
-$mildBlue : #cddcdf;
-$orange : #cc5803;
-$lightGrey : #b6b6b6;
-$white : #f8edeb;
-$green : #6ede8a;
-$red : #a9280f;
+$grey: #141414;
+$mildBlue: #cddcdf;
+$orange: #cc5803;
+$lightGrey: #b6b6b6;
+$white: #f8edeb;
+$green: #6ede8a;
+$red: #a9280f;
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-body{
+body {
     background-color: $mildBlue;
     min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     color: $grey;
 
-    h1{
+    h1 {
         color: $grey;
         text-transform: uppercase;
         text-align: center;
         margin: 20px 15px;
     }
 
-    .fa-solid{
+    .fa-solid {
         font-size: 25px;
     }
 
-    .container{
+    .container {
         width: 50%;
-        padding: 10px;  
+        padding: 10px;
         display: flex;
         flex-direction: column;
         // justify-content: space-between;
         align-items: center;
 
-        .sound{
+        .sound {
             display: flex;
             justify-content: space-between;
             // width: 40%;
             padding: 10px;
 
-            #musicName{
-                padding: 0 35px ;
+            #musicName {
+                padding: 0 35px;
             }
         }
-        .calculator{
+        .calculator {
             background-color: $grey;
             width: 50%;
             border-radius: 10px;
@@ -61,7 +61,7 @@ body{
             padding: 10px;
             box-shadow: -15px 15px 10px $lightGrey;
 
-            .display{
+            .display {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -76,15 +76,14 @@ body{
                 font-size: 37px;
                 padding: 5px 10px;
             }
-            
-            .row{
-                width:100%;
+
+            .row {
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
                 margin: 10px 0;
-                
 
-                button{
+                button {
                     min-width: 23%;
                     min-height: 50px;
                     border-radius: 10%;
@@ -93,45 +92,53 @@ body{
                     background-color: $green;
                     border: none;
                 }
-                .back{
+                .back {
                     background-color: $red;
                 }
-                .operator{
+                .operator {
                     font-weight: bold;
                     background-color: $orange;
                 }
-                .equal{
+                .equal {
                     background-color: $lightGrey;
+                }
+                .power {
+                    position: relative;
+                }
+                .power::after {
+                    content: "2";
+                    font-size: 16px;
+                    position: absolute;
+                    top: 20%;
                 }
             }
         }
     }
 }
-@media screen and (min-width:678px) {
-    body{
-        .container{
+@media screen and (min-width: 678px) {
+    body {
+        .container {
             width: 80%;
         }
-    }    
+    }
 }
 
-@media screen and (max-width:677px) {
-    body{
+@media screen and (max-width: 677px) {
+    body {
         width: 100%;
         min-height: 10vh;
-        h1{
+        h1 {
             display: none;
         }
-        .container{
+        .container {
             width: 100%;
             height: calc(100vh - 35px);
 
-            .calculator{
+            .calculator {
                 width: 100%;
                 height: 100%;
                 box-shadow: none;
             }
         }
     }
-    
 }
