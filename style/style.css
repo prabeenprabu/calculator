@@ -91,7 +91,7 @@ body .container .calculator .row .power {
   position: relative;
 }
 body .container .calculator .row .power::after {
-  content: "2";
+  content: "y";
   font-size: 16px;
   position: absolute;
   top: 20%;
