@@ -78,3 +78,16 @@ leftMove.onclick = function () {
         setMusic(musicDir[index], index);
     }
 };
+//factorial function
+function factorial(n) {
+    let k = 1;
+
+    if (n == 0) return 0;
+    else {
+        while (n != 1) {
+            k *= n;
+            n--;
+        }
+        return k;
+    }
+}
