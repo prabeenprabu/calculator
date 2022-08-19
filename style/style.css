@@ -112,11 +112,11 @@ body .container .calculator .row .power::after {
   }
   body .container {
     width: 100%;
-    height: calc(100vh - 35px);
   }
   body .container .calculator {
     width: 100%;
     height: 100%;
     box-shadow: none;
+    margin-top: 0.5rem;
   }
 }/*# sourceMappingURL=style.css.map */
