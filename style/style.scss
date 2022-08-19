@@ -11,6 +11,8 @@ $red: #a9280f;
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none;
 }
 
 body {
@@ -42,6 +44,10 @@ body {
         // justify-content: space-between;
         align-items: center;
 
+        .theme {
+            display: flex;
+            gap: 1rem;
+        }
         .sound {
             display: flex;
             justify-content: space-between;

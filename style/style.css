@@ -2,6 +2,8 @@
 * {
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 body {
@@ -29,6 +31,10 @@ body .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+body .container .theme {
+  display: flex;
+  gap: 1rem;
 }
 body .container .sound {
   display: flex;
