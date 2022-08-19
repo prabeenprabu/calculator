@@ -104,3 +104,10 @@ function factorial(n) {
         return k;
     }
 }
+
+// square root function
+function root() {
+    let ans = calDisplay.value;
+    clean();
+    calDisplay.value = Math.sqrt(ans);
+}
