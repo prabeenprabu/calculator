@@ -4,6 +4,7 @@
   margin: 0;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -26,11 +27,20 @@ body .fa-solid {
   font-size: 25px;
 }
 body .container {
-  width: 50%;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+body .container .footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 0;
+  background-color: #141414;
+  margin-top: 0.3rem;
+  color: #f8edeb;
+  border-radius: 1rem;
 }
 body .container .theme {
   display: flex;
