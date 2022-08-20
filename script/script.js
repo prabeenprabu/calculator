@@ -17,6 +17,19 @@ musicDir.push(
     "music/mugunth.wav"
 );
 
+//adding music to the button click
+let buttons = document.getElementsByTagName("button");
+for (i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", () => {
+        music.play();
+    });
+}
+
+//mute music
+// musicDisplay.addEventListener("dblclick", () => {
+
+// });
+
 musicDisplay.innerHTML = musicList[index];
 //functions
 function display(val) {
