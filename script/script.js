@@ -111,3 +111,33 @@ function root() {
     clean();
     calDisplay.value = Math.sqrt(ans);
 }
+
+//--------------theme---------------
+//theme list
+let themes = new Array("default", "dark");
+let count = 0;
+//getting buttons
+let buttons = document.getElementsByTagName("button");
+// nav buttons
+let themeLeft = document.getElementById("leftTheme");
+let themeRight = document.getElementById("rightTheme");
+//theme lable
+let themeLabel = document.getElementById("themeLabel");
+
+//add function for the right and left buttons
+themeLeft.addEventListener("click", () => {
+    if (count == 0) {
+        count = themes.length - 1;
+    } else {
+        count--;
+    }
+    themeLabel.innerHTML = themes[count];
+});
+
+themeRight.addEventListener("click", () => {
+    if (count == themes.length - 1) count = 0;
+    else count++;
+    themeLabel.innerHTML = themes[count];
+});
+
+//themes developments
