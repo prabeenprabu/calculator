@@ -19,6 +19,7 @@ musicDir.push(
 
 //adding music to the button click
 let buttons = document.getElementsByTagName("button");
+buttons[0].style.backgroundColor = "#355ad4";
 for (i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", () => {
         music.play();
@@ -26,9 +27,8 @@ for (i = 0; i < buttons.length; i++) {
 }
 
 //mute music
-// musicDisplay.addEventListener("dblclick", () => {
 
-// });
+musicDisplay.onclick = () => (music.muted = !music.muted);
 
 musicDisplay.innerHTML = musicList[index];
 //functions
