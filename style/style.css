@@ -35,6 +35,7 @@ body .container {
 body .container .theme {
   display: flex;
   gap: 1rem;
+  display: none;
 }
 body .container .sound {
   display: flex;

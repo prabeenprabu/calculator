@@ -141,3 +141,6 @@ themeRight.addEventListener("click", () => {
 });
 
 //themes developments
+
+
+//------------factorial functions-------------
