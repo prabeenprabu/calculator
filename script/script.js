@@ -20,7 +20,7 @@ musicDir.push(
 musicDisplay.innerHTML = musicList[index];
 //functions
 function display(val) {
-    music.play();
+    // music.play();
     if (calDisplay.value.startsWith("E")) {
         clean();
         calDisplay.value += val;
@@ -33,7 +33,7 @@ function display(val) {
     }
 }
 function answer() {
-    music.play();
+    // music.play();
     if (calDisplay.value != "") {
         if (calDisplay.value.startsWith("0")) {
             calDisplay.value = eval(calDisplay.value.slice(1));
@@ -46,7 +46,7 @@ function answer() {
     }
 }
 function back() {
-    music.play();
+    // music.play();
     //getting the display content
     var num = calDisplay.value;
     //re add the got content without last character
@@ -55,7 +55,7 @@ function back() {
 
 // function to clean the display box
 function clean() {
-    music.play();
+    // music.play();
     calDisplay.value = "";
     calDisplay.style.color = "#141414";
 }
@@ -116,8 +116,6 @@ function root() {
 //theme list
 let themes = new Array("default", "dark");
 let count = 0;
-//getting buttons
-let buttons = document.getElementsByTagName("button");
 // nav buttons
 let themeLeft = document.getElementById("leftTheme");
 let themeRight = document.getElementById("rightTheme");
@@ -142,5 +140,30 @@ themeRight.addEventListener("click", () => {
 
 //themes developments
 
-
 //------------factorial functions-------------
+
+function product_Range(a, b) {
+    var prd = a,
+        i = a;
+
+    while (i++ < b) {
+        prd *= i;
+    }
+    return prd;
+}
+
+function combination() {
+    //getting the value from calculator display
+    let val = calDisplay.value.toString();
+    let valStr = val.split(".");
+    let n = parseInt(valStr[0]);
+    let r = parseInt(valStr[1]);
+    if (n == r || r == 0) {
+        calDisplay.value = 1;
+    } else {
+        r = r < n - r ? n - r : r;
+        let answer = product_Range(r + 1, n) / product_Range(1, n - r);
+        clean();
+        calDisplay.value = answer;
+    }
+}
