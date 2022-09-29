@@ -1,81 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculator</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
+            integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            rel="stylesheet"
+            href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+        />
+        <link rel="stylesheet" href="style/style.css" />
+        <link rel="shortcut icon" href="image/logo.png" type="image/x-icon" />
+        <link rel="stylesheet" href="style/intro.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css"
-        integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
-</head>
-
-<body>
-    <div class="container">
-        <h1 class="name">calculator</h1>
-        <div class="sound">
-            <i id="left" class="fa-solid fa-chevron-left"></i>
-            <h2 id="musicName">lorem10</h2>
-            <i id="right" class="fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="theme">
-            <i id="leftTheme" class="fa-solid fa-chevron-left"></i>
-            <h2 id="themeLabel">Default</h2>
-            <i id="rightTheme" class="fa-solid fa-chevron-right"></i>
-        </div>
-        <div class="calculator">
-            <audio id="play" src="music/beep.wav"></audio>
-            <input type="text" id="display" disabled class="display">
-            <div class="row">
-                <button onclick="clean()" class="operator">AC</button>
-                <button class="back" onclick="back()"><i class="fa-solid fa-delete-left"></i></button>
-                <button onclick="display('.')" class="operator">.</button>
-                <button onclick="answer()" class="operator equal">=</button>
-            </div>
-            <div class="row">
-                <button onclick="display('9')">9</button>
-                <button onclick="display('8')">8</button>
-                <button onclick="display('7')">7</button>
-                <button onclick="display('+')" class="operator">+</button>
-            </div>
-            <div class="row">
-                <button onclick="display('6')">6</button>
-                <button onclick="display('5')">5</button>
-                <button onclick="display('4')">4</button>
-                <button onclick="display('-')" class="operator">-</button>
-            </div>
-            <div class="row">
-                <button onclick="display('3')">3</button>
-                <button onclick="display('2')">2</button>
-                <button onclick="display('1')">1</button>
-                <button onclick="display('*')" class="operator">x</button>
-            </div>
-            <div class="row">
-                <button onclick="combination()" class="operator">C</button>
-                <button onclick="display('0')">0</button>
-                <button onclick="display('<')" class="operator">(</button>
-                <button onclick="display('/')" class="operator">/</button>
-            </div>
-            <div class="row">
-                <button onclick="display('**')" class="power operator">x</button>
-                <button onclick="root()" class="operator"><i class="fa-solid fa-square-root-variable"></i></button>
-                <button onclick="display('>')" class="operator">)</button>
-                <button onclick="fact()" class="operator">!</button>
+    <body>
+        <div class="container2">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="note">
+                <h2>notes</h2>
+                <p>Tap the sound lable to mute and unmute.</p>
+                <p>
+                    Easily you can find factorial by clicking this
+                    <span class="symbol">!</span> symbol. <br />
+                    <span>E.g. 5!</span>
+                </p>
+                <p>
+                    You can find the combinations by pressing C buttom after
+                    giving the input like 5.2.
+                    <br />
+                    <span class="com"> E.g. nCr -> 5C2 -> 5.2</span>
+                </p>
             </div>
         </div>
-        <div class="footer">
-            <p> &copy; Created by Prabeen | 2022</p>
+        <div class="container">
+            <h1 class="name">calculator</h1>
+            <div class="sound">
+                <i id="left" class="fa-solid fa-chevron-left"></i>
+                <h2 id="musicName">lorem10</h2>
+                <i id="right" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="theme">
+                <i id="leftTheme" class="fa-solid fa-chevron-left"></i>
+                <h2 id="themeLabel">Default</h2>
+                <i id="rightTheme" class="fa-solid fa-chevron-right"></i>
+            </div>
+            <div class="calculator">
+                <audio id="play" src="music/beep.wav"></audio>
+                <input type="text" id="display" disabled class="display" />
+                <div class="row">
+                    <button onclick="clean()" class="operator">AC</button>
+                    <button class="back" onclick="back()">
+                        <i class="fa-solid fa-delete-left"></i>
+                    </button>
+                    <button onclick="display('.')" class="operator">.</button>
+                    <button onclick="answer()" class="operator equal">=</button>
+                </div>
+                <div class="row">
+                    <button onclick="display('9')">9</button>
+                    <button onclick="display('8')">8</button>
+                    <button onclick="display('7')">7</button>
+                    <button onclick="display('+')" class="operator">+</button>
+                </div>
+                <div class="row">
+                    <button onclick="display('6')">6</button>
+                    <button onclick="display('5')">5</button>
+                    <button onclick="display('4')">4</button>
+                    <button onclick="display('-')" class="operator">-</button>
+                </div>
+                <div class="row">
+                    <button onclick="display('3')">3</button>
+                    <button onclick="display('2')">2</button>
+                    <button onclick="display('1')">1</button>
+                    <button onclick="display('*')" class="operator">x</button>
+                </div>
+                <div class="row">
+                    <button onclick="combination()" class="operator">C</button>
+                    <button onclick="display('0')">0</button>
+                    <button onclick="display('<')" class="operator">(</button>
+                    <button onclick="display('/')" class="operator">/</button>
+                </div>
+                <div class="row">
+                    <button onclick="display('**')" class="power operator">
+                        x
+                    </button>
+                    <button onclick="root()" class="operator">
+                        <i class="fa-solid fa-square-root-variable"></i>
+                    </button>
+                    <button onclick="display('>')" class="operator">)</button>
+                    <button onclick="fact()" class="operator">!</button>
+                </div>
+            </div>
+            <div class="footer">
+                <p>&copy; Created by Prabeen | 2022</p>
+            </div>
         </div>
-    </div>
 
-    <script src="script/script.js"></script>
-</body>
-
+        <script src="script/script.js"></script>
+    </body>
 </html>

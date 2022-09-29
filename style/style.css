@@ -63,7 +63,7 @@ body .container .calculator {
   flex-wrap: wrap;
   padding: 10px;
   box-shadow: -15px 15px 10px #b6b6b6;
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
 }
 body .container .calculator .display {
   display: flex;

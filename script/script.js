@@ -180,3 +180,11 @@ function combination() {
         calDisplay.value = answer;
     }
 }
+
+//-----------function for intro closing
+let closeBtn = document.querySelector(".fa-xmark");
+let container = document.querySelector(".container2");
+closeBtn.addEventListener("click", () => {
+    container.classList.remove("active");
+});
+document.onload(container.classList.add("active"));
